@@ -1,0 +1,229 @@
+body {
+    background-color: antiquewhite;
+    font-family: sans-serif;
+    margin: 0;
+    width: 100%;
+}
+
+nav {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding-top: 1em;
+    border-bottom-style: solid;
+    border-bottom-color: #DCDCDC;
+    border-bottom-width: 0.1em;
+}
+
+ul {
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+img.logo {
+    width: 10em;
+    display: block;
+    margin: auto;
+    margin-bottom: 1em
+}
+
+a.nav {
+    font-family: sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #2bcf7a;
+}
+
+form.zoeken {
+    margin-top: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding: 1em;
+    border-radius: 1em;
+    box-sizing: border-box;
+    width: 20em;
+    text-align: left;
+}
+
+input[type=search] {
+    height: 4em;
+    width: 25em;
+    margin: auto;
+    margin-bottom: 1.5em;
+    border-radius: 1em;
+    padding-left: 1em;
+    border-style: solid;
+    border-color: gray;
+    border-width: thin;
+}
+
+.zoeklabel {
+    display: block;
+    text-align: left;
+    font-size: 3em;
+    font-weight: 700;
+    color: #2bcf7a;
+    line-height: 1em;
+}
+
+.zoeklogo {
+    height: 1.2em;
+    width: 1.2em;
+    display: inline-block;
+    margin-right: 0.5em;
+    margin-bottom: -0.2em;
+}
+
+.zoekbutton {
+    display: block;
+    margin-bottom: 2em;
+    padding: 0.8em 4.2em;
+    border-radius: 99em;
+    color: white;
+    background-color: #FB1355;
+    border-style: none;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.genrelabel {
+    display: block;
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1em;
+    color: #606060;
+}
+
+select {
+    display: block;
+    height: 4em;
+    width: 25em;
+    margin-bottom: 2em;
+    border-radius: 1em;
+    border-style: solid;
+    border-color: gray;
+    border-width: thin;
+    color: #606060;
+    background-color: white;
+}
+
+.checkbox {
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1em;
+    color: #606060;
+    margin-bottom: 0.1em;
+}
+
+input[type=checkbox] {
+    color: 606060;
+    font-size: 20em;
+    font-weight: 100;
+    display: block;
+    margin-left: 0;
+}
+
+article.article {
+    background-color: white;
+    padding: 2em 1em;
+    border-radius: 1em;
+    width: 20em;
+    box-sizing: border-box;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    color: #21d470;
+}
+
+p {
+    margin-bottom: 2em;
+    color: #606060;
+    line-height: 1.4em;
+}
+
+a.leesmeer {
+    background-color: #21d470;
+    padding: 0.7em 2em;
+    border-radius: 99px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    border-bottom-color: aquamarine;
+}
+
+img {
+    width: 100%;
+    width: calc(100% + 2em);
+    margin: -1em;
+    margin-top: -2em;
+    margin-bottom: 0em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+form.inloggen {
+    margin-top: 14em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #1D008E;
+    padding: 1em;
+    border-radius: 1em;
+    box-sizing: border-box;
+    width: 20em;
+    text-align: left;
+}
+
+.gebruikersnaam, .wachtwoord {
+    height: 4em;
+    width: 25em;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 1em;
+    border-color: gray;
+    padding-left: 1em;
+    box-sizing: border-box;
+    margin-top: 1em;
+}
+
+.inloglabel {
+    display: block;
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: white;
+    line-height: 1em;
+}
+
+.buttoninlog {
+    margin-top: 1em;
+    display: block;
+    padding: 0.7em 4.7em;
+    border-radius: 99em;
+    color: #1D008E;
+    background-color: white;
+    border-style: none;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.accountaanmaken {
+    text-decoration: none;
+    color: white;
+    font-size: 0.6em;
+    font-weight: 400;
+}
+
