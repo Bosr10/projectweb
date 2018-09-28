@@ -6,3 +6,6 @@ Maak een verhalen website voor Transavia.
 Pas de huisstijl van transavia toe aan je HTML doormiddel van CSS.
 
 Schoolproject.
+
+Rick
+50074330
