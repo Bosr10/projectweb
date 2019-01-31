@@ -1,101 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <a href="#"><img class=logo src="https://www.transavia.com/static/img/logos/transavia-logo.svg" alt="Home"></a>
-                <li><a class=nav href="#">Alle verhalen</a></li>
-                <li><a class=nav href="#">Over ons</a></li>
-                <li><a class=nav href="#">Contact</a></li>
-                <li><a class=nav href="#">Account</a></li>
-            </ul>
-        </nav>
+  <header>
+    <nav>
+      <a href="index.html"><img src="https://www.transavia.com/static/img/logos/transavia-logo.svg" alt="Home"></a>
 
-        <form class=inloggen action="#">
-            <label class=inloglabel for="gebruikersnaam">Inloggen
-                <input class=gebruikersnaam type="text" placeholder="Gebruikersnaam of e-mail">
-                <input class=wachtwoord type="password" placeholder="Wachtwoord">
-                <a class=accountaanmaken href="">Account aanmaken ></a>
-            </label>
+      <ul>
+        <li><a href="index.html"><img src="images/Stories.svg" alt="verhalen"></a></li>
+        <li><a href="favorieten.html"><img src="images/Like.svg" alt="Like"></a></li>
+        <li><a href="inlog.html"><img src="images/Profile.svg" alt="Account"></a></li>
+      </ul>
 
-            <button class="buttoninlog">Log in</button>
+    </nav>
+
+    <div>
+      <a href="index.html"><img src="https://www.transavia.com/static/img/logos/transavia-logo.svg" alt="Home"></a>
+    </div>
+
+    <div class="banner">
+      <div class="container">
+        <form class=zoeken action="">
+          <fieldset>
+            <legend>Verhaal zoeken</legend>
+            <label for="search">Zoek een verhaal</label>
+            <input type="search" placeholder="Bijvoorbeeld genre, title...">
+            <button><img src="http://www.clker.com/cliparts/n/U/H/1/H/u/search-icon-white-one-md.png" alt="zoeken">Zoeken</button>
+          </fieldset>
+
+          <button type="button">Filter</button>
         </form>
 
-        <form class=zoeken action="fake link">
-            <label class=zoeklabel for="Zoeken">Zoek een verhaal
-                <input class=search type="search" placeholder="Bijvoorbeeld genre, title...">
-            </label>
 
-            <button class=zoekbutton><img class="zoeklogo" src="http://www.clker.com/cliparts/n/U/H/1/H/u/search-icon-white-one-md.png" alt="zoeken">Zoeken</button>
+        <form action="">
+          <fieldset>
+            <legend>Sorteer op</legend>
+            <label><input type="radio" name="sorteer" value="populariteit"> Populariteit</label>
+            <label><input type="radio" name="sorteer" value="beoordeling"> Beoordeling</label>
+          </fieldset>
 
-            <h2 class=checkbox>Genre</h2>
-            <input type="checkbox" name="tijdsduur" value="vijf"> Poëzie
-            <input type="checkbox" name="tijdsduur" value="tien"> Romantisch
-            <input type="checkbox" name="tijdsduur" value="vijftien"> Spanning
-            <input type="checkbox" name="tijdsduur" value="vijftien"> Sport
-            <input type="checkbox" name="tijdsduur" value="vijftien"> Anders
 
-            <h2 class=checkbox>Tijdsduur in minuten</h2>
-            <input type="checkbox" name="tijdsduur" value="vijf"> 5
-            <input type="checkbox" name="tijdsduur" value="tien"> 10
-            <input type="checkbox" name="tijdsduur" value="vijftien"> 15
+          <fieldset>
+            <legend>Genre</legend>
+            <label><input type="checkbox" name="poezie" value=""> Poëzie</label>
+            <label><input type="checkbox" name="romantisch" value=""> Romantisch</label>
+            <label><input type="checkbox" name="spanning" value=""> Spanning</label>
+            <label><input type="checkbox" name="sport" value=""> Sport</label>
+          </fieldset>
 
-            <h2 class=checkbox>Filter op:</h2>
-            <input type="radio" name="populariteit" value="populariteit"> Populariteit
-            <input type="radio" name="beoordeling" value="beoordeling"> Beoordeling
+
+          <fieldset>
+            <legend>Leesduur</legend>
+            <label><input type="checkbox" name="tijdsduur" value="5"> 5</label>
+            <label><input type="checkbox" name="tijdsduur" value="10"> 10</label>
+            <label><input type="checkbox" name="tijdsduur" value="15"> 15</label>
+          </fieldset>
         </form>
-    </header>
+      </div>
+    </div>
+  </header>
 
-    <form>
+  <div class="uitgelicht">
 
-    </form>
+  </div>
 
 
-    <main>
-        <section>
-            <article class=article>
+  <div class="container">
+    <h1>Alle verhalen</h1>
+  </div>
 
-                <img src="https://www.vvvzeeland.nl/media/3367/berkenbosch.jpg?anchor=center&mode=crop&width=1200&height=800&rnd=131385671060000000&quality=90" alt="">
+  <main>
+    <article>
+      <img src="images/Dialoog.png" alt="">
 
-                <h2>Verhaal 1</h2>
+      <h2>Dialoog</h2>
 
-                <p>Dit is een korte introductie van het verhaal wat hier gaat komen. Deze tekst is nu dus alleen even opgemaakt zodat je kunt zien hoe het ongeveer gaat worden. Super leuk dus allemaal!</p>
+      <button type="button"><img src="images/heart.png"></button>
 
-                <a class=leesmeer href="#">Lees meer</a>
-            </article>
+      <a href="verhaal.html"></a>
+    </article>
 
-            <article class=article>
-                <img src="https://www.vvvzeeland.nl/media/3367/berkenbosch.jpg?anchor=center&mode=crop&width=1200&height=800&rnd=131385671060000000&quality=90" alt="">
+    <article>
+      <img src="images/ericlucassen.png" alt="">
 
-                <h2>Verhaal 2</h2>
+      <h2>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij ‘de kids’</h2>
 
-                <p>Dit is een korte introductie van het verhaal wat hier gaat komen. Deze tekst is nu dus alleen even opgemaakt zodat je kunt zien hoe het ongeveer gaat worden. Super leuk dus allemaal!</p>
+      <button type="button"><img src="images/heart.png"></button>
 
-                <a class=leesmeer href="#">Lees meer</a>
-            </article>
+      <a href="verhaal.html"></a>
+    </article>
 
-            <article class=article>
-                <img src="https://www.vvvzeeland.nl/media/3367/berkenbosch.jpg?anchor=center&mode=crop&width=1200&height=800&rnd=131385671060000000&quality=90" alt="">
+    <article>
+      <img src="images/Droom.png" alt="">
 
-                <h2>Verhaal 3</h2>
+      <h2>Johan Cruijf</h2>
 
-                <p>Dit is een korte introductie van het verhaal wat hier gaat komen. Deze tekst is nu dus alleen even opgemaakt zodat je kunt zien hoe het ongeveer gaat worden. Super leuk dus allemaal!</p>
+      <button type="button"><img src="images/heart.png"></button>
 
-                <a class=leesmeer href="#">Lees meer</a>
-            </article>
-        </section>
-    </main>
+      <a href="verhaal.html"></a>
+    </article>
 
+    <article>
+      <img src="images/gemeenteblik.png" alt="">
+
+      <h2>Nico Dijkshoorn die Mart Smeets imiteert</h2>
+
+      <button type="button"><img src="images/heart.png"></button>
+
+      <a href="verhaal.html"></a>
+    </article>
+
+    <article>
+      <img src="images/johancruijf.png" alt="">
+
+      <h2>De Cock en het raadsel van het verdwenen boek</h2>
+
+      <button type="button"><img src="images/heart.png"></button>
+
+      <a href="verhaal.html"></a>
+    </article>
+
+    <article>
+      <img src="images/letterlijk.png" alt="">
+
+      <h2>Droom</h2>
+
+      <button type="button"><img src="images/heart.png"></button>
+
+      <a href="verhaal.html"></a>
+    </article>
+
+    <article>
+      <img src="images/Notitie.png" alt="">
+
+      <h2>Klumperbeven</h2>
+
+      <button type="button"><img src="images/heart.png"></button>
+
+      <a href="verhaal.html"></a>
+    </article>
+
+    <article>
+      <img src="images/poep.png" alt="">
+
+      <h2>Vergezocht</h2>
+
+      <button type="button"><img src="images/heart.png"></button>
+
+      <a href="verhaal.html"></a>
+    </article>
+
+    <article>
+      <img src="images/regenboog.png" alt="">
+
+      <h2>Vergezocht</h2>
+
+      <button type="button"><img src="images/heart.png"></button>
+
+      <a href="verhaal.html"></a>
+    </article>
+
+    <article>
+      <img src="images/poepen.png" alt="">
+
+      <h2>Vergezocht</h2>
+
+      <button type="button"><img src="images/heart.png"></button>
+
+      <a href="verhaal.html"></a>
+    </article>
+
+    <article>
+      <img src="images/stoned.png" alt="">
+
+      <h2>Vergezocht</h2>
+
+      <button type="button"><img src="images/heart.png"></button>
+
+      <a href="verhaal.html"></a>
+    </article>
+
+    <article>
+      <img src="images/dromen.png" alt="">
+
+      <h2>Vergezocht</h2>
+
+      <button type="button"><img src="images/heart.png"></button>
+
+      <a href="verhaal.html"></a>
+    </article>
+  </main>
+
+
+  <script src="script/script.js"></script>
 
 </body>
 

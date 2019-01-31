@@ -1,229 +1,772 @@
-body {
-    background-color: antiquewhite;
-    font-family: sans-serif;
-    margin: 0;
-    width: 100%;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  background-color: antiquewhite;
+  font-family: sans-serif;
+  margin: 0;
+  width: 100%;
+}
+
+/*NAVIGATIE*/
 nav {
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
-    padding-top: 1em;
-    border-bottom-style: solid;
-    border-bottom-color: #DCDCDC;
-    border-bottom-width: 0.1em;
+  position: fixed;
+  display: flex;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: white;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-bottom-style: solid;
+  border-bottom-color: #DCDCDC;
+  border-bottom-width: 0.1em;
+  justify-content: flex-start;
+  height: 4em;
+  z-index: 1;
+  /*item on top*/
+  overflow: hidden;
+}
+
+nav+div {
+  display: none;
+  /*Only visable on mobile display*/
 }
 
 ul {
-    padding: 0px;
+  margin-left: auto;
+  margin-right: 1em;
+  display: flex;
+  justify-content: flex-end;
+  height: 2.5em;
 }
 
 li {
-    list-style: none;
+  list-style: none;
+  border-radius: none;
+  margin-left: 3em;
 }
 
-img.logo {
-    width: 10em;
-    display: block;
-    margin: auto;
-    margin-bottom: 1em
+li img {
+  width: 2em;
 }
 
-a.nav {
-    font-family: sans-serif;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1em;
-    line-height: 1.5em;
-    color: #2bcf7a;
+li:active {
+  transform: translateY(-5.4em);
 }
 
+li:hover {
+  transform: translateY(-5.4em);
+}
+
+nav a {
+  margin-left: 1em;
+  min-width: 9em;
+}
+
+/*CONTAINER LOG IN FORMULIER EN ZOEK FORMULIER*/
+.container {
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  width: 65.876em;
+}
+
+.banner {
+  background: url('../images/adult-airport-apparel-993607.jpg') no-repeat;
+  background-size: 100%;
+  background-position: center;
+  height: 28em;
+}
+
+/*LOG IN FORMULIER*/
+form.inloggen {
+  margin-top: 6em;
+  background-color: #1D008E;
+  padding: 1em;
+  border-radius: 1em;
+  box-sizing: border-box;
+  width: 20.625em;
+  text-align: left;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+form.inloggen input[type=text],
+form.inloggen input[type=password] {
+  height: 4em;
+  width: 25em;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 1em;
+  border-color: gray;
+  padding-left: 1em;
+  box-sizing: border-box;
+}
+
+form.inloggen label {
+  text-align: left;
+  font-size: 0.75em;
+  color: white;
+  padding: none;
+}
+
+form.inloggen button {
+  margin-top: 1em;
+  display: block;
+  padding: 0.7em 4.7em;
+  border-radius: 99em;
+  color: #1D008E;
+  background-color: white;
+  border-style: none;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 0.4s;
+}
+
+form.inloggen button:hover {
+  transform: scale(1.07);
+  transition: 0.4s;
+}
+
+form.inloggen a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.75em;
+  font-weight: 400;
+}
+
+form.inloggen h2 {
+  color: white;
+  margin-bottom: 0.5em;
+}
+
+input:required:invalid {
+  outline-color: #FB1355;
+  outline-width: 1em;
+}
+
+input:required:valid {
+  outline-color: #00D66C;
+  outline-width: 1em;
+}
+
+input:focus {
+  transform: scale(1.02);
+}
+
+input[type=password] {
+  margin-bottom: 1em;
+}
+
+/*ACCOUNT AANMAKEN LINK*/
+form.inloggen+a {
+  margin-top: 6em;
+  margin-left: 1em;
+  padding: 1em;
+  background-color: #00D66C;
+  width: 20.625em;
+  height: 5em;
+  color: white;
+  border-radius: 1em;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/*ACCOUNT AANMAKEN -> PAGINA*/
+form.aanmaken {
+  margin-top: 6em;
+  background-color: #00D66C;
+  padding: 1em;
+  border-radius: 1em;
+  box-sizing: border-box;
+  width: 20.625em;
+  text-align: left;
+  margin-left: 1em;
+  overflow: hidden;
+}
+
+form.aanmaken input[type=text],
+form.aanmaken input[type=password],
+form.aanmaken input[type=email] {
+  height: 4em;
+  width: 100%;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 1em;
+  border-color: gray;
+  padding-left: 1em;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+}
+
+form.aanmaken label {
+  text-align: left;
+  font-size: 0.75em;
+  color: white;
+  padding: none;
+}
+
+form.aanmaken button {
+  margin-top: 1em;
+  border-radius: 99em;
+  color: #00D66C;
+  background-color: white;
+  border-style: none;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 0.4s;
+}
+
+form.aanmaken button:hover {
+  transform: scale(1.07);
+  transition: 0.4s;
+  background-color: white;
+  color: #00D66C;
+}
+
+form.aanmaken h2 {
+  color: white;
+  margin-bottom: 0.5em;
+}
+
+/*ZOEK FORMULIER*/
 form.zoeken {
-    margin-top: 1.5em;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-    padding: 1em;
-    border-radius: 1em;
-    box-sizing: border-box;
-    width: 20em;
-    text-align: left;
+  margin-top: 6em;
+  margin-right: 2em;
+  background-color: white;
+  padding: 1em;
+  border-radius: 1em;
+  box-sizing: border-box;
+  width: 20.625em;
+  height: 20em;
+  text-align: left;
+  overflow: hidden;
 }
 
 input[type=search] {
-    height: 4em;
-    width: 25em;
+  height: 4em;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  border: none;
+  padding-left: 1.5em;
+  transition: 0.6s;
+  background-color: #F7F7F7;
+}
+
+input[type=search]:focus {
+  background-color: #F7F7F7;
+  margin-left: -1.5em;
+  width: calc(100% + 3em);
+  border: none;
+  outline: none;
+  height: 6em;
+  transition: 0.6s;
+  padding-left: 2em;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  display: none;
+}
+
+fieldset>label {
+  text-align: left;
+  font-size: 3em;
+  font-weight: 700;
+  color: #2bcf7a;
+  line-height: 1em;
+}
+
+fieldset button>img {
+  height: 1.2em;
+  width: 1.2em;
+  display: inline-block;
+  margin-right: 0.5em;
+  margin-bottom: -0.2em;
+}
+
+fieldset>button {
+  margin-bottom: 1em;
+  height: 2.5em;
+  border-radius: 99em;
+  color: white;
+  background-color: #FB1355;
+  border-style: none;
+  font-weight: 700;
+  font-size: 1em;
+  width: 8em;
+  cursor: pointer;
+}
+
+fieldset>button:active {
+  transform: translateY(0.1em);
+}
+
+fieldset>button:focus {
+  outline: none;
+}
+
+fieldset>button:hover {
+  background-color: #FF658E;
+}
+
+fieldset+button {
+  background-color: white;
+  height: 2.5em;
+  border-radius: 99em;
+  color: #1D008E;
+  font-weight: 700;
+  font-size: 1em;
+  width: 8em;
+  border: 0.1em solid;
+  border-color: #1D008E;
+  cursor: pointer;
+}
+
+fieldset+button:active {
+  transform: translateY(0.1em);
+}
+
+fieldset+button:focus {
+  outline: none;
+}
+
+fieldset+button:hover {
+  background-color: #5E40B8;
+  color: white;
+  border: none;
+}
+
+.show {
+  margin-top: 6em;
+  visibility: visible;
+}
+
+.showbutton {
+  background-color: #1D008E;
+  color: white;
+}
+
+/*FILTER*/
+form+form {
+  visibility: hidden;
+  background-color: #1D008E;
+  padding: 1em;
+  border-radius: 1em;
+  box-sizing: border-box;
+  width: 43.25em;
+  height: 10em;
+  text-align: left;
+  color: white;
+  margin-top: -20em;
+  transition: all 0.5s cubic-bezier(1, .01, .35, 1);
+  display: flex;
+}
+
+form+form fieldset {
+  justify-content: space-around;
+  width: 100%;
+}
+
+form+form label {
+  font-size: 1em;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  margin-bottom: 0.2em;
+}
+
+form+form legend {
+  display: flex;
+  font-size: 1.25em;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+}
+
+form+form input {
+  cursor: pointer;
+  margin-right: 0.5em;
+}
+
+/*VERHALEN*/
+h1 {
+  font-size: 2.4em;
+  color: #1D008E;
+  margin-top: 1em;
+}
+
+main {
+  margin: 0 auto;
+  width: 67.876em;
+  height: 130em;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column wrap;
+  align-items: flex-start;
+}
+
+article {
+  position: relative;
+  background-color: white;
+  padding: 2em 1em 0em 1em;
+  border-radius: 1em;
+  width: 20.625em;
+  margin-top: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+  transition: 0.4s;
+}
+
+article:hover {
+  transform: scale(1.03);
+  transition: 0.4s;
+}
+
+article h2 {
+  color: #21d470;
+  margin-top: 0.5em;
+}
+
+article>a {
+  /* BRON: https://codepen.io/anon/pen/PVoaOe Maakt het hele article clickable*/
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  /* raises anchor tag above everything else in div */
+  background-color: white;
+  /*workaround to make clickable in IE */
+  opacity: 0;
+  /*workaround to make clickable in IE */
+  filter: alpha(opacity=0);
+  /*workaround to make clickable in IE */
+}
+
+article button {
+  height: 4.3em;
+  width: 4.3em;
+  margin-top: 1em;
+  background-color: #9A9A9A;
+  border-radius: 99em;
+  padding-top: 1.25em;
+  transition: 0.4s;
+  border: none;
+  cursor: pointer;
+}
+
+article button:focus {
+  outline: none;
+}
+
+article button>img {
+  transform: scale(0.35);
+}
+
+article button:hover {
+  transform: scale(1.07);
+  transition: 0.4s;
+  background-color: #FB1355;
+}
+
+article img {
+  width: calc(100% + 2em);
+  margin: -1em;
+  margin-top: -2em;
+  margin-bottom: 0em;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+
+.starthartje {
+  background-color: #FB1355;
+}
+
+.start {
+  margin-top: 4em;
+  position: fixed;
+  width: 100%;
+  transition: 1s;
+  z-index: 1;
+}
+
+/*verhaal pagina*/
+.verhaal {
+  background: url('../images/desktop.jpg') no-repeat;
+  background-size: 100%;
+  background-position: top;
+  height: 60em;
+  max-width: 65.876em;
+  margin: 0 auto;
+}
+
+.verhaal_achtergrond {
+  background-color: white;
+}
+
+/*download pagina*/
+.download {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 4em;
+  width: 100%;
+  height: 6em;
+  background-color: #1D008E;
+}
+
+.download button {
+  height: 4.3em;
+  width: 4.3em;
+  margin-right: 3em;
+  margin-left: 2em;
+  background-color: #FB1355;
+  border-radius: 99em;
+  transition: 0.4s;
+  border: none;
+  cursor: pointer;
+}
+
+.download button:focus {
+  outline: none;
+}
+
+.download button>img {
+  transform: scale(0.7);
+}
+
+.download button:hover {
+  transform: scale(1.07);
+  transition: 0.4s;
+}
+
+.download p {
+  color: antiquewhite;
+  font-weight: 700;
+}
+
+.changebutton {
+  background-color: #00D66C;
+  margin-top: -73em;
+}
+
+.greenbar {
+  background-color: #00D66C;
+  height: 56em;
+}
+
+.movearticle {
+  margin-top: -48em;
+  height: 27em;
+}
+
+.changep {
+  margin-top: -50em;
+}
+
+/*responsive*/
+@media (max-width: 67.876em) {
+  .container {
+    width: 43.25em;
     margin: auto;
-    margin-bottom: 1.5em;
-    border-radius: 1em;
-    padding-left: 1em;
-    border-style: solid;
-    border-color: gray;
-    border-width: thin;
+  }
+
+  form.zoeken {
+    margin-left: 0em;
+  }
+
+  form+form {
+    width: 20.625em;
+    flex-direction: column;
+    height: 20em;
+    margin-top: 6em;
+  }
+
+  form+form fieldset {
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+
+  header+div {
+    justify-content: center;
+  }
+
+  main {
+    justify-content: flex-start;
+    width: 45.25em;
+    height: 190em;
+  }
+
+  form+form {
+    margin-top: -20em;
+  }
+
+  form.inloggen+a {
+    margin-top: 2em;
+  }
+
+  .verhaal {
+    background: url('../images/tablet.jpg') no-repeat;
+    background-size: 100%;
+    background-position: top;
+    height: 60em;
+    max-width: 43.25em;
+    margin: 0 auto;
+  }
 }
 
-.zoeklabel {
-    display: block;
-    text-align: left;
-    font-size: 3em;
-    font-weight: 700;
-    color: #2bcf7a;
-    line-height: 1em;
-}
+@media (max-width: 45em) {
+  .container {
+    width: 20.625em;
+    margin: auto;
+  }
 
-.zoeklogo {
-    height: 1.2em;
-    width: 1.2em;
-    display: inline-block;
-    margin-right: 0.5em;
-    margin-bottom: -0.2em;
-}
-
-.zoekbutton {
-    display: block;
-    margin-bottom: 2em;
-    padding: 0.8em 4.2em;
-    border-radius: 99em;
-    color: white;
-    background-color: #FB1355;
-    border-style: none;
-    font-weight: 700;
-    font-size: 1em;
-}
-
-.genrelabel {
-    display: block;
-    text-align: left;
-    font-size: 1.5em;
-    font-weight: 700;
-    line-height: 1em;
-    color: #606060;
-}
-
-select {
-    display: block;
-    height: 4em;
-    width: 25em;
-    margin-bottom: 2em;
-    border-radius: 1em;
-    border-style: solid;
-    border-color: gray;
-    border-width: thin;
-    color: #606060;
+  nav+div {
+    display: flex;
     background-color: white;
-}
-
-.checkbox {
-    text-align: left;
-    font-size: 1.5em;
-    font-weight: 700;
-    line-height: 1em;
-    color: #606060;
-    margin-bottom: 0.1em;
-}
-
-input[type=checkbox] {
-    color: 606060;
-    font-size: 20em;
-    font-weight: 100;
-    display: block;
-    margin-left: 0;
-}
-
-article.article {
-    background-color: white;
-    padding: 2em 1em;
-    border-radius: 1em;
-    width: 20em;
-    box-sizing: border-box;
-    margin-top: 1em;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-h2 {
-    color: #21d470;
-}
-
-p {
-    margin-bottom: 2em;
-    color: #606060;
-    line-height: 1.4em;
-}
-
-a.leesmeer {
-    background-color: #21d470;
-    padding: 0.7em 2em;
-    border-radius: 99px;
-    text-decoration: none;
-    color: white;
-    font-weight: 700;
-    border-bottom-color: aquamarine;
-}
-
-img {
-    width: 100%;
-    width: calc(100% + 2em);
-    margin: -1em;
-    margin-top: -2em;
-    margin-bottom: 0em;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
-}
-
-form.inloggen {
-    margin-top: 14em;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #1D008E;
     padding: 1em;
-    border-radius: 1em;
-    box-sizing: border-box;
-    width: 20em;
-    text-align: left;
-}
-
-.gebruikersnaam, .wachtwoord {
+    border-bottom-style: solid;
+    border-bottom-color: #DCDCDC;
+    border-bottom-width: 0.1em;
     height: 4em;
-    width: 25em;
-    border-style: solid;
-    border-width: thin;
-    border-radius: 1em;
-    border-color: gray;
-    padding-left: 1em;
-    box-sizing: border-box;
-    margin-top: 1em;
-}
+    position: relative;
+  }
 
-.inloglabel {
-    display: block;
-    text-align: left;
-    font-size: 1.5em;
-    font-weight: 700;
-    color: white;
-    line-height: 1em;
-}
+  nav+div img {
+    margin-top: 0em;
+    transform: scale(0.9);
+  }
 
-.buttoninlog {
-    margin-top: 1em;
-    display: block;
-    padding: 0.7em 4.7em;
-    border-radius: 99em;
-    color: #1D008E;
-    background-color: white;
-    border-style: none;
-    font-weight: 700;
-    font-size: 1em;
-}
+  nav {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    overflow: hidden;
+    border-top-style: solid;
+    border-top-color: #DCDCDC;
+    border-top-width: 0.1em;
+    border-bottom: none;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+  }
 
-.accountaanmaken {
-    text-decoration: none;
-    color: white;
-    font-size: 0.6em;
-    font-weight: 400;
-}
+  nav>a {
+    display: none;
+  }
 
+  nav>ul {
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  li img {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  li {
+    margin-left: 0;
+  }
+
+  li:active {
+    transform: translateY(-5.4em);
+  }
+
+  li:hover {
+    transform: translateY(-5.4em);
+  }
+
+  main {
+    flex-direction: column;
+    width: 22.625em;
+    height: 365em;
+  }
+
+  article:hover {
+    transform: none;
+  }
+
+  form.zoeken {
+    margin-top: 2em;
+    margin-left: 0em;
+    margin-right: 0em;
+  }
+
+  form+form {
+    width: 20.625em;
+    flex-direction: column;
+    height: 23em;
+    margin-top: -47em;
+    z-index: 1;
+  }
+
+  .show {
+    margin-top: 1.5em;
+  }
+
+  form+form fieldset {
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+
+  form.inloggen {
+    margin-top: 2em;
+    margin-left: 0em;
+    margin-right: 0em;
+  }
+
+  .banner {
+    background: url('../images/adult-airport-apparel-993607.jpg') no-repeat;
+    background-position: center;
+    height: 24em;
+  }
+
+  form.inloggen+a {
+    margin-top: 2em;
+    margin-left: 0em;
+    margin-right: 0em;
+  }
+
+  .verhaal {
+    background: url('../images/mobiel.jpg') no-repeat;
+    background-size: 100%;
+    background-position: top;
+    height: 60em;
+    max-width: 22.625em;
+    margin: 0 auto;
+  }
+
+  form.aanmaken {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 2em;
+  }
+
+  .download {
+    margin-top: 0em;
+  }
+
+  .container article {
+    margin-right: 0em;
+    margin-left: 0em;
+  }
+}
